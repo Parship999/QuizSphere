@@ -41,7 +41,7 @@ const Quiz = () => {
         'https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple'
       );
       const data = await response.json();
-      
+
       const formattedQuestions = data.results.map((questionData) => {
         return {
           question: questionData.question,
@@ -54,7 +54,7 @@ const Quiz = () => {
           ].sort(() => Math.random() - 0.5),
         };
       });
-      
+
       setQuestions(formattedQuestions);
       setLoading(false);
     } catch (error) {
@@ -78,7 +78,7 @@ const Quiz = () => {
 
   const handleNextQuestion = () => {
     const nextQuestionIndex = currentQuestionIndex + 1;
-    
+
     if (nextQuestionIndex < questions.length) {
       setCurrentQuestionIndex(nextQuestionIndex);
     } else {
@@ -106,14 +106,14 @@ const Quiz = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Trivial Quiz
+        QuizSphere
       </Title>
 
       <AnimatePresence mode="wait">
         {gameState === 'idle' && (
-          <Controls 
-            onStart={startGame} 
-            gameState={gameState} 
+          <Controls
+            onStart={startGame}
+            gameState={gameState}
             loading={loading}
           />
         )}

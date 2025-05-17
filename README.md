@@ -1,4 +1,4 @@
-# Trivial Quiz
+# QuizSphere
 
 A stunning trivia quiz application built with React and Vite. This application fetches trivia questions from the Open Trivia Database API and presents them in a beautiful, animated interface.
 
@@ -31,7 +31,7 @@ A stunning trivia quiz application built with React and Vite. This application f
 1. Clone the repository
 ```bash
 git clone <repository-url>
-cd trivial-quiz
+cd quizsphere
 ```
 
 2. Install dependencies
